@@ -1,4 +1,78 @@
-# Getting Started with Create React App
+# Bug Tracker Application
+
+A full-stack bug tracking application with real-time notifications using Socket.io.
+
+## Features
+
+- User authentication and authorization
+- Project management
+- Ticket tracking with status, priority, and type
+- Real-time notifications
+- Activity logging
+- Drag-and-drop interface
+- Reporting and analytics
+
+## Tech Stack
+
+### Frontend
+- React
+- Axios for API requests
+- Socket.io client for real-time updates
+- DnD Kit for drag-and-drop functionality
+- Recharts for data visualization
+
+### Backend
+- Node.js with Express
+- MongoDB with Mongoose
+- Socket.io for real-time communication
+- JWT for authentication
+
+## Deployment Instructions
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- MongoDB database (local or Atlas)
+- Git
+
+### Environment Setup
+
+1. Backend Environment Variables (.env file in the backend directory):
+   ```
+   MONGO_URI=your_mongodb_connection_string
+   PORT=5001
+   JWT_SECRET=your_jwt_secret
+   ```
+
+2. Frontend Environment Variables (for production deployment):
+   ```
+   REACT_APP_API_URL=your_backend_api_url
+   REACT_APP_SOCKET_URL=your_backend_socket_url
+   ```
+
+### Production Deployment
+
+1. Use the provided deployment script:
+   ```
+   ./deploy.sh
+   ```
+
+2. Or follow these steps manually:
+   ```
+   # Set environment to production
+   export NODE_ENV=production
+   
+   # Build the React frontend
+   npm run build
+   
+   # Start the backend server
+   cd backend
+   npm start
+   ```
+
+3. Serve the frontend build directory with a static file server like Nginx or use a service like Netlify, Vercel, or GitHub Pages.
+
+4. For the backend, you can deploy to services like Heroku, DigitalOcean, AWS, or any other Node.js hosting platform.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
